@@ -1,0 +1,379 @@
+1
+00:00:00,342 --> 00:00:02,800
+COLT MCANLIS: 随着外界的大量手持设备
+COLT MCANLIS: With a plethora of handhelds out in the wild,
+
+2
+00:00:02,800 --> 00:00:05,200
+现在是良好的时机来扩展你的用户
+now is the perfect time to start extending your users'
+
+3
+00:00:05,200 --> 00:00:07,400
+手持设备体验到穿戴设备上了
+handheld experience to their wearable device.
+
+4
+00:00:07,400 --> 00:00:08,452
+我是Colt McAnlis
+My name is Colt McAnlis.
+
+5
+00:00:08,452 --> 00:00:10,660
+手持设备和穿戴设备交流的第一步
+The first step to communicating between your handheld
+
+6
+00:00:10,660 --> 00:00:13,780
+始于穿戴设备DataLayer API
+and your wearable starts with a wearable data layer API.
+
+7
+00:00:13,780 --> 00:00:16,520
+它的核心是  DataLayer API允许你的手持设备
+At its core, the data layer API allows for your handheld
+
+8
+00:00:16,520 --> 00:00:19,460
+和穿戴设备在任意时间自动同步每一块
+and wearable to automatically sync a piece of data any time
+
+9
+00:00:19,460 --> 00:00:20,267
+更改的数据
+it's changed.
+
+10
+00:00:20,267 --> 00:00:22,100
+酷的地方就是  所有繁重的任务
+The cool part is, that all the heavy lifting
+
+11
+00:00:22,100 --> 00:00:24,475
+像蓝牙协商和数据传输
+to make that happen-- like Bluetooth negotiation and data
+
+12
+00:00:24,475 --> 00:00:26,310
+都会在DataLayer API下处理
+transfer-- is handled under the hood,
+
+13
+00:00:26,310 --> 00:00:28,989
+解放你并让你去处理更重要的事
+freeing you up to work on more important things.
+
+14
+00:00:28,989 --> 00:00:30,780
+这个过程的工作原理是你允许你的设备
+This process works by allowing your devices
+
+15
+00:00:30,780 --> 00:00:34,120
+担当数据发送者  数据接收者  或者两者都是
+to take on the row of data sender, data receiver, or both.
+
+16
+00:00:34,120 --> 00:00:37,080
+发送方设备创建一块将被同步的数据块
+The sender device sets up a piece of data to be synced.
+
+17
+00:00:37,080 --> 00:00:40,460
+一旦数据发生改变就会被发送到接收方设备
+And any time that data changes, it will be sent over to the receiver.
+
+18
+00:00:40,460 --> 00:00:42,870
+接收方设备  相反的  监听数据更改
+The receiving device, in turn, listens for changes
+
+19
+00:00:42,870 --> 00:00:45,020
+提供一个回调函数来提醒APP
+and provides a callback function to notify the app
+
+20
+00:00:45,020 --> 00:00:47,150
+当某些东西更新的时候
+when something's been updated.
+
+21
+00:00:47,150 --> 00:00:49,280
+核心对象将被当成DataItem在设备间传送
+The core object that's sent between the devices
+
+22
+00:00:49,280 --> 00:00:51,987
+这有效地在设备上提供了
+is known as DataItem, which effectively provides
+
+23
+00:00:51,987 --> 00:00:54,070
+能够在手持设备和穿戴设备间
+data storage on the device, with automatic syncing
+
+24
+00:00:54,070 --> 00:00:56,590
+自动同步数据仓库
+between the handheld and the wearable.
+
+25
+00:00:56,590 --> 00:00:59,470
+在基础上  DataItem被认为是有效载荷对象
+At its base, DataItem consists of a payload object,
+
+26
+00:00:59,470 --> 00:01:02,520
+它将持有真实的数据  而路径对象则是为
+which will hold the actual data, as well as a path object that
+
+27
+00:01:02,520 --> 00:01:05,150
+DataItem扮演唯一的标识字符串
+acts as a unique identifier string for this data
+
+28
+00:01:05,150 --> 00:01:07,600
+这对数据接收方很重要
+item, which is important on the receiver side,
+
+29
+00:01:07,600 --> 00:01:11,830
+也是为了知道某些特定的数据块是否真正被更新了
+to know which particular piece of data has actually been updated.
+
+30
+00:01:11,830 --> 00:01:14,280
+DataItem对于在手持设备和穿戴设备之间
+DataItem is great for sending small batches of data back
+
+31
+00:01:14,280 --> 00:01:16,270
+来回发送小批量的数据很有优势
+and forth between the wearable and handheld.
+
+32
+00:01:16,270 --> 00:01:18,249
+举个例子  用穿戴设备传感器
+For example, using the wear device sensors
+
+33
+00:01:18,249 --> 00:01:20,290
+来收集心率信息然后通过用户的
+to gather heart rate information and then send it
+
+34
+00:01:20,290 --> 00:01:22,760
+手机发送  这将会与过去14周的
+across the user's phone, which will then cross-reference it
+
+35
+00:01:22,760 --> 00:01:25,060
+传感器数据交叉引用
+with the past 14 weeks of sensor data,
+
+36
+00:01:25,060 --> 00:01:29,110
+然后提供结果图到手表上来显示
+and provide the resulting graph back to display it on the watch.
+
+37
+00:01:29,110 --> 00:01:31,670
+作为当前的限制  DataItem对象的负载
+As a current restriction, the payload of a data item object
+
+38
+00:01:31,670 --> 00:01:35,545
+是设计于处理小量数据的  大概100K左右吧
+is designed to handle small amounts of data, say around 100K or so.
+
+39
+00:01:35,545 --> 00:01:37,170
+如果你想让这些更强大
+So if you want something more powerful,
+
+40
+00:01:37,170 --> 00:01:40,510
+你需要一个asset对象附加到DataItem上
+you need to attach an asset object to the data item.
+
+41
+00:01:40,510 --> 00:01:42,610
+这允许你通过蓝牙传输发送大块的
+This allows you to send large blobs of binary data
+
+42
+00:01:42,610 --> 00:01:45,170
+二进制数据  像图片
+over Bluetooth transport, like images.
+
+43
+00:01:45,170 --> 00:01:47,030
+举个例子  假如手持设备APP
+For example, let's say the handheld app
+
+44
+00:01:47,030 --> 00:01:49,690
+下载了一张图片  调整了大小并把它发送到
+downloaded an image, resized it, and sent it over
+
+45
+00:01:49,690 --> 00:01:51,250
+穿戴设备来显示
+to the wearable for display.
+
+46
+00:01:51,250 --> 00:01:53,680
+手持设备在过程中处理了所有繁重的工作
+The handheld handles all the heavy lifting in processing,
+
+47
+00:01:53,680 --> 00:01:57,180
+然后穿戴设备用来显示工作的简单结果
+while the wear device gets to display the simple results of it.
+
+48
+00:01:57,180 --> 00:02:00,460
+关于asset对象酷的地方在于他们处理了数据的缓存
+The cool thing about asset objects is that they handle caching of data
+
+49
+00:02:00,460 --> 00:02:03,970
+以防止数据重传和节省蓝牙带宽
+to prevent retransmission and conserve Bluetooth bandwidth,
+
+50
+00:02:03,970 --> 00:02:06,502
+意思是这里只能有一个asset对象的实例被缓存
+meaning there can be only one instance of an asset cached.
+
+51
+00:02:06,502 --> 00:02:08,210
+如果你尝试多次发送它
+And if you try to send it multiple times,
+
+52
+00:02:08,210 --> 00:02:10,479
+它将不会浪费带宽和电源
+it won't waste bandwidth or battery.
+
+53
+00:02:10,479 --> 00:02:12,880
+简单地说  DataLayer API
+On the simpler side of things, the data layer API
+
+54
+00:02:12,880 --> 00:02:15,020
+同时提供了Message API
+also provides the message API, which
+
+55
+00:02:15,020 --> 00:02:17,190
+这是用于做普通任务的API  像告诉你的穿戴设备
+are ideal to do common tasks like telling your wear
+
+56
+00:02:17,190 --> 00:02:19,360
+开启一个Activity  或者是告诉手机
+device to start an activity, or telling the phone
+
+57
+00:02:19,360 --> 00:02:21,040
+切歌
+to skip to the next song.
+
+58
+00:02:21,040 --> 00:02:22,830
+默认地  这些消息通常是
+By default, these messages are generally
+
+59
+00:02:22,830 --> 00:02:25,174
+远程过程调用的性质
+of the remote procedure call nature.
+
+60
+00:02:25,174 --> 00:02:26,590
+也就是说  一旦它们被发送
+That is, once they're shipped off,
+
+61
+00:02:26,590 --> 00:02:29,372
+消息是否被收到将无从考证
+there's no validation that the message was actually received.
+
+62
+00:02:29,372 --> 00:02:32,310
+如果你想要发送一些更复杂的东西  你可以设置这些消息
+If you want something more complex, however, you can set the messages
+
+63
+00:02:32,310 --> 00:02:34,880
+工作在  请求/回应  模型里
+to work in request/response model, where
+
+64
+00:02:34,880 --> 00:02:36,480
+连接的一方将发送
+one side of the connection will send
+
+65
+00:02:36,480 --> 00:02:39,550
+一条消息到另一个设备  其中  反过来  接收方将做一些工作
+a message to the other device, which, in turn, does some work,
+
+66
+00:02:39,550 --> 00:02:42,740
+然后进行响应  反过来  和这些响应
+and then responds, in turn, with the response.
+
+67
+00:02:42,740 --> 00:02:46,440
+最酷的用例是你将要看到的
+The coolest use cases are the one that you have yet to come up with.
+
+68
+00:02:46,440 --> 00:02:48,390
+为了开始  请翻阅API页面
+To get started, swing by the API page,
+
+69
+00:02:48,390 --> 00:02:51,377
+这里将包含所有你需要开始同步设备的信息
+which will contain all the info you need to start syncing devices.
+
+70
+00:02:51,377 --> 00:02:53,710
+同时别忘记查看Android Developer主页
+And don't forget to check out the Android Developer home
+
+71
+00:02:53,710 --> 00:02:56,380
+以获得更多有用的建议和技巧
+page for more great tips and tricks.
+
+72
+00:02:56,380 --> 00:02:58,186
+拥有这个更强大的Data API
+With these more powerful data APIs,
+
+73
+00:02:58,186 --> 00:03:00,060
+你将有新的机会使你的设备能够
+there's new opportunities to get your devices
+
+74
+00:03:00,060 --> 00:03:02,620
+用新的  有趣的方式在一起工作
+working with each other in new and interesting ways.
+
+75
+00:03:02,620 --> 00:03:03,730
+我的名字是Colt McAnlis
+My name is Colt McAnlis.
+
+76
+00:03:03,730 --> 00:03:06,310
+现在  去创建更好的APP吧
+Now go build better apps.
