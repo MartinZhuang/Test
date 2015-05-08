@@ -15,7 +15,7 @@ handheld experience to their wearable device.
 
 4
 00:00:07,400 --> 00:00:08,452
-我是Colt McAnlis
+我的名字是Colt McAnlis
 My name is Colt McAnlis.
 
 5
