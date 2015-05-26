@@ -1,0 +1,319 @@
+1
+00:00:00,000 --> 00:00:01,820
+[MUSIC PLAYING]
+[MUSIC PLAYING]
+
+2
+00:00:04,512 --> 00:00:05,220
+BRUNO DENUIT: 大家好
+BRUNO DENUIT: Hi.
+
+3
+00:00:05,220 --> 00:00:06,226
+我是Bruno
+I'm Bruno.
+
+4
+00:00:06,226 --> 00:00:08,870
+我是EnPlug的首席软件架构师
+I'm the Chief Software Architect at EnPlug.
+
+5
+00:00:08,870 --> 00:00:14,060
+我们是第一家做数字标牌的开放软件平台
+We are the first open software platform for digital signage.
+
+6
+00:00:14,060 --> 00:00:16,050
+在这个视频里  我将要给你们展现
+In this video, I would like to show you
+
+7
+00:00:16,050 --> 00:00:20,820
+你怎么才能使用EnPlug平台来开发一个应用
+how you can use the EnPlug platform to develop an app
+
+8
+00:00:20,820 --> 00:00:25,240
+并且在世界上的任何一个物理设备上展现你的内容
+and deploy your content to any physical device in the world.
+
+9
+00:00:25,240 --> 00:00:28,030
+所以当我们开始做EnPlug的时候   
+So when we started EnPlug, we decided
+
+10
+00:00:28,030 --> 00:00:31,810
+我们决定从Android平台开始着手  因为它是一个开放的平台
+to go with the Android platform, because it's an open platform.
+
+11
+00:00:31,810 --> 00:00:36,060
+这是非常有名的  并且这让我们可以在非常便宜的设备
+It's very popular, and it also let us run our software
+
+12
+00:00:36,060 --> 00:00:38,810
+上运行我们的软件
+on inexpensive hardware.
+
+13
+00:00:38,810 --> 00:00:42,200
+我们决定使我们的软件成为一个开放的平台
+We decided to make our software an open platform
+
+14
+00:00:42,200 --> 00:00:43,730
+所以那些想展示自己页面在
+so that the people who want to bring
+
+15
+00:00:43,730 --> 00:00:46,290
+数字世界的人可以通过
+their content into the digital world
+
+16
+00:00:46,290 --> 00:00:48,690
+我们的平台专注于自身价值增长
+could focus on their value add by building
+
+17
+00:00:48,690 --> 00:00:50,500
+并创建他们的应用
+an app on our platform, and wouldn't
+
+18
+00:00:50,500 --> 00:00:55,830
+并且他们并不需要担心我们所担心的所有细节问题
+have to worry about all the details that we had to worry about.
+
+19
+00:00:55,830 --> 00:00:58,190
+所以你怎么才能开始做呢
+So how do you start doing that?
+
+20
+00:00:58,190 --> 00:01:01,880
+你怎么才能开始在EnPlug的平台上写应用
+How do you start writing an app for the EnPlug platform?
+
+21
+00:01:01,880 --> 00:01:04,060
+访问developers.enplug.com
+Go to developers.enplug.com.
+
+22
+00:01:04,060 --> 00:01:06,710
+注册并且下载我们的SDK
+Sign up and download our SDK.
+
+23
+00:01:06,710 --> 00:01:09,420
+我们的SDK由两个部分组成
+Our SDK is made up of two parts.
+
+24
+00:01:09,420 --> 00:01:12,910
+明显的是  这里有为写我们实际运行在设备上
+Obviously, there is the SDK for actually writing the app
+
+25
+00:01:12,910 --> 00:01:15,350
+的应用所准备的SDK
+that we run on the devices.
+
+26
+00:01:15,350 --> 00:01:17,880
+这个将为Android所使用  但是它也同样
+It will run for Android, but it also
+
+27
+00:01:17,880 --> 00:01:23,960
+可以运行在桌面端  Mac和Windows以及我所提及的Chrome OS
+runs in desktop, Mac and Windows, and now Chrome OS, like I mentioned.
+
+28
+00:01:23,960 --> 00:01:27,640
+另外的部分就是如果你想让你的应用
+And the other part is if you want your app
+
+29
+00:01:27,640 --> 00:01:31,310
+更好地可制定化  如果有一些配置
+to be more customized, if there are certain configuration
+
+30
+00:01:31,310 --> 00:01:34,370
+是你想让你的用户进行选择的
+settings that you want the user to select,
+
+31
+00:01:34,370 --> 00:01:38,280
+然后你可以使用我们的网页SDK来创建一个网页
+then you can use our web SDK to create a web page,
+
+32
+00:01:38,280 --> 00:01:44,540
+并且让用户在EnPlug保存所有的配置以及各种事务
+and have the user save all these configuration and things in EnPlug.
+
+33
+00:01:44,540 --> 00:01:49,510
+我们在Github上有两个样例应用
+We have two examples on GitHub of sample apps
+
+34
+00:01:49,510 --> 00:01:53,780
+你们可以下载并且使用它们
+that you can download and use out of the box.
+
+35
+00:01:53,780 --> 00:01:55,820
+第一个样例是一个非常简单的应用
+The first one is a very simple app
+
+36
+00:01:55,820 --> 00:01:58,520
+能够允许你展现任何样式的网页
+that allows you to show any kind of web page.
+
+37
+00:01:58,520 --> 00:02:01,690
+所以你能够从头开始做
+So you can get going from the start.
+
+38
+00:02:01,690 --> 00:02:04,990
+只需要下载那个应用  让它指向你的网站
+Just download that app, point it to your websites,
+
+39
+00:02:04,990 --> 00:02:07,620
+然后它将展现在屏幕上
+and it will start showing on the screen.
+
+40
+00:02:07,620 --> 00:02:09,630
+第二个应用是为那些
+The second app is for people who want
+
+41
+00:02:09,630 --> 00:02:12,390
+有点基础并且想创建他们自己的应用的人准备的
+to go a little bit further and create their own app,
+
+42
+00:02:12,390 --> 00:02:14,110
+他们想定制他们自己的应用
+customize their own app.
+
+43
+00:02:14,110 --> 00:02:21,210
+并且那个包含了一个在我们平台上创建应用的一个框架
+And that contains a framework for creating an app on our platform.
+
+44
+00:02:21,210 --> 00:02:24,760
+这里有一个我们网页应用的一个样例
+So here you have an example of our web app
+
+45
+00:02:24,760 --> 00:02:29,200
+你可以配置你自己的独特的应用
+where you can configure your different apps.
+
+46
+00:02:29,200 --> 00:02:32,520
+你可以把他们打开或者关闭
+You can toggle them on and off.
+
+47
+00:02:32,520 --> 00:02:36,620
+我选了Waitlist.me的应用来展示怎么来配置它
+I selected Waitlist.me app to show how to configure it.
+
+48
+00:02:36,620 --> 00:02:41,170
+你可以去配置你的Waitlist应用
+You can go and configure your Waitlist app.
+
+49
+00:02:41,170 --> 00:02:44,660
+它向你申请连接Waitlist.me的账户
+It asks you to connect with an account on Waitlist.me.
+
+50
+00:02:44,660 --> 00:02:48,390
+所以这是一个EnPlug和第三方平台
+So this is an example of the integration between EnPlug
+
+51
+00:02:48,390 --> 00:02:49,290
+集成的样例
+and a third party.
+
+52
+00:02:52,600 --> 00:02:54,915
+输入你的Waitlist的证书
+Type in your credentials for Waitlist.
+
+53
+00:03:01,040 --> 00:03:09,710
+你选择了你登陆的地点
+You select the location that you are checked in with.
+
+54
+00:03:09,710 --> 00:03:17,640
+并且输入一些文本  一些标签
+And type some text, some tagline.
+
+55
+00:03:17,640 --> 00:03:20,970
+最少的聚会人数
+Minimum number of people.
+
+56
+00:03:20,970 --> 00:03:25,540
+这些是Waitlist.me的所有配置信息
+These are all configuration settings for Waitlist.me.
+
+57
+00:03:25,540 --> 00:03:28,870
+你保存它  并且它展示
+You save it, and it shows up preview of how
+
+58
+00:03:28,870 --> 00:03:31,160
+你的屏幕的样子的预览
+your screen will look like.
+
+59
+00:03:31,160 --> 00:03:32,750
+我希望你们体验一下EnPlug
+I hope you check out EnPlug.
+
+60
+00:03:32,750 --> 00:03:35,130
+去developers.enplug.com
+Go to developers.enplug.com.
+
+61
+00:03:35,130 --> 00:03:38,910
+注册  下载我们的SDK  试用它  然后你就会发现
+Sign up, download our SDK, try it out, and you'll see how easy
+
+62
+00:03:38,910 --> 00:03:40,400
+这是多么简单多么开心的事情
+and how much fun you will have.
+
+63
+00:03:40,400 --> 00:03:41,790
+
+Thank you.
+
+64
+00:03:41,790 --> 00:03:44,240
+[MUSIC PLAYING]
+[MUSIC PLAYING]
